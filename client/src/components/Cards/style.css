@@ -1,0 +1,40 @@
+.card-panel{
+    background-color: #3333333f;
+    background-size: contain;
+    min-width: fit-content;
+    width: 20rem
+}
+
+#entry1{
+    margin: 2rem;
+}
+
+#entry2{
+    margin: 2rem;
+}
+
+.heroName{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+#start{
+    margin: 2rem;
+}
+
+.info{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.FunFact{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#woo{
+    margin-top: 10rem
+}

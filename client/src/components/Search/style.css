@@ -1,0 +1,30 @@
+#in{
+    text-align: center;
+}
+
+#vs{
+    font-family: MyFirstFont;
+    text-align: center;
+    margin: 1rem;
+}
+
+#search{
+ text-align: center;
+ margin-top: 8rem;
+}
+
+#hero2{
+    background-color: black;
+}
+
+#btn{
+    text-align: center;
+    background-color: rgb(155, 155, 240);
+    font-family: MyFirstFont;
+    font-size: x-large;
+    color: black;
+    width: fit-content;
+    height: 5rem;
+    border-radius: 1rem;
+    margin-right: 2.5rem;
+}

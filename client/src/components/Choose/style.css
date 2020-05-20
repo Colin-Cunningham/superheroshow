@@ -1,0 +1,64 @@
+.card-panel{
+    background-color: #3333333f;
+    padding: 2px;
+    background-size: contain;
+    text-align: center;
+}
+
+#entry1{
+    margin: 2rem;
+}
+
+#entry2{
+    margin: 2rem;
+}
+
+.heroName{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+#start{
+    margin: 2rem;
+}
+
+.info{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.FunFact{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#woo{
+    margin-top: 6rem
+}
+
+.choose{
+    text-align: left;
+    width: 15rem;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    padding: 5px;
+    font-size: larger
+};
+
+.name1{
+    margin: 0 auto;
+    font-style: oblique;
+}
+
+#wool{
+    margin-left: 23rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    margin-top: -4rem;
+}

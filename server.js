@@ -28,7 +28,6 @@ app.get('/api/choose/:name', (req, res) => {
 
 app.get('/api/fight/:id', (req, res) => {
     const id = req.params.id
-    console.log(baseURL + APIkey + "/" + id )
     api.make_API_call(baseURL + APIkey + "/" + id)
     .then(response => {
         res.json(response)
