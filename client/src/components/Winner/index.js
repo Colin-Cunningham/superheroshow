@@ -26,19 +26,11 @@ function Winner() {
   const [hero1, setHero1] = useState([]);
 
   const [heroImage1, setHeroImage1] = useState([]);
-
   const [hero1powerStats, setHero1powerStats] = useState([]);
-
   const [hero1Height, setHero1Height] = useState([]);
-
-
   const [hero1Weight, setHero1Weight] = useState([]);
-  
-
   const [hero1Apperance, setHero1Apperance] = useState([]);
-
   const [heroBio, setHeroBio] = useState([])
-
   const [heroAlias, setHeroAlias] = useState([])
 
 
@@ -63,7 +55,7 @@ function Winner() {
   const Background1 = heroImage1.url;
 
 
-  console.log(hero1powerStats.intelligence)
+  console.log(hero1)
  
 
   return (
@@ -82,6 +74,7 @@ function Winner() {
                 <Tab>Appearance</Tab>
                 <Tab>Biography</Tab>
                 <Tab>Stats</Tab>
+                <Tab>More...</Tab>
               </TabList>
             </div>
 
@@ -115,6 +108,16 @@ function Winner() {
             <ul className="collection">
                 <li className="collection-item">Intellegence: {hero1powerStats.intelligence} </li>
                   <li className="collection-item">Strength: {hero1powerStats.strength}</li>
+                <li className="collection-item">Speed: {hero1powerStats.speed}</li>
+                <li className="collection-item">Durability: {hero1powerStats.durability} </li>
+                <li className="collection-item">Combat: {hero1powerStats.combat} </li>
+                <li className="collection-item">Power: {hero1powerStats.power} </li>
+              </ul>
+            </TabPanel>
+            <TabPanel>
+            <ul className="collection">
+                <li className="collection-item">Intellegence: {hero1powerStats.intelligence} </li>
+                <li className="collection-item">Strength: {hero1powerStats.strength}</li>
                 <li className="collection-item">Speed: {hero1powerStats.speed}</li>
                 <li className="collection-item">Durability: {hero1powerStats.durability} </li>
                 <li className="collection-item">Combat: {hero1powerStats.combat} </li>
