@@ -38,3 +38,20 @@
 #woo{
     margin-top: 10rem
 }
+
+#image{
+    width: 175px
+}
+
+#calc{
+    border-radius: 3px;
+    background-color: #333333;
+    color: whitesmoke;
+    font-size: larger;
+    padding: 12px;
+    margin-right: 10%;
+}
+
+.container{
+    text-align: center;
+}

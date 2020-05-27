@@ -6,6 +6,7 @@ import Directions from "../Directions/index"
 import Search from "../Search/index"
 import Card from "../Cards/index"
 import Choose from "../Choose/index"
+import Winner from "../Winner/index"
 import { Route } from "react-router-dom";
 
 
@@ -22,6 +23,9 @@ function Header() {
       </Route>
       <Route exact path={"/fight/:id1/:id2"}>
         <Card />
+      </Route>
+      <Route exact path={"/winner/:id"}>
+        <Winner />
       </Route>
     </div>
 

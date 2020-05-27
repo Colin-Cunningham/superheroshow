@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const api = require('./api')
 const baseURL = "https://superheroapi.com/api/"
 const APIkey = "3007889659253910"

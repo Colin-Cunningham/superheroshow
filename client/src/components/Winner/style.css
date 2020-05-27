@@ -1,0 +1,54 @@
+#entry{
+    width: 50%;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+#infor{
+    width: 33%;
+    float: right;
+}
+
+#coc{
+    width: 10px;
+}
+
+#entry2 li{
+    display: inline-block;
+  
+}
+
+#entry2 ul{
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+#tabhead li{
+    display: inline-block;
+    margin: .5rem;
+}
+
+#tabhead ul{
+    font-style: italic;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+#image1{
+    width: 200px;
+    float: left;
+    margin-left: 12rem;
+}
+
+.collection-item{
+    width: 100%;
+    text-align: left;
+    background-color: #333333;
+    margin: 0 auto;
+}
+
+.alias{
+    display: inline-block;
+    font-style: oblique;
+    font-size: smaller;
+}

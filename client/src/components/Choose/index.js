@@ -1,23 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import "./style.css";
-import styled, { keyframes } from "styled-components";
-import { slideInRight, slideInLeft } from "react-animations";
 import API from "../../utils/API"
 
-// Div Animations -----------------
-const leftIn = keyframes`${slideInLeft}`;
-const rightIn = keyframes`${slideInRight}`;
 
-//Hero One Slide in from the left
-const Slide1 = styled.div`
-  animation: 3s ${leftIn};
-`;
-
-//Hero2 Slide in from the right
-const Slide2 = styled.div`
-  animation: 3s ${rightIn};
-`;
 
 //-------------------------------
 
@@ -62,6 +48,7 @@ function Choose() {
 
   const history = useHistory()
 
+  //Start with error checking If Id's arent clicked
   function begin(){
     if(heroId1 === "" || heroId2 === ""){
       alert("Please Select Combatants")
@@ -78,7 +65,6 @@ function Choose() {
       <div id="woo" className="row">
           <h4 style={{textAlign: "center"}}>Which one did you mean?</h4>
         <div id="entry1" className="col s4 m5">
-          <Slide1>
             <div className="card-panel">
               { hero1 ? hero1.map((hero) => (
                 <>
@@ -106,10 +92,8 @@ function Choose() {
               )): <p>There are no results to display</p>}
             </div>
             <h4 key={heroId1.name} style={{fontSize: "x-large"}}>Combatant: {heroId1.name}  </h4>
-          </Slide1>
         </div>
         <div id="entry2" className="col s4 m5">
-          <Slide2>
             <div className="card-panel">
               { hero2 ? hero2.map((hero) => (
                 <>
@@ -140,7 +124,6 @@ function Choose() {
               )) : <p>There are no results to display</p>}
             </div>
             <h4 key={heroId2.name}style={{fontSize: "x-large"}}>Combatant: {heroId2.name} </h4>
-          </Slide2>
         </div>
       </div>
       <button onClick={begin} id="wool" >Lets start this thing</button>

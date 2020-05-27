@@ -3,6 +3,7 @@
     padding: 2px;
     background-size: contain;
     text-align: center;
+    min-height: 280px;
 }
 
 #entry1{
