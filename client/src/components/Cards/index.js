@@ -208,7 +208,11 @@ function Card() {
     }
 
     if(count1 === count2){
-      alert("Fuck do we do now?")
+      if(Number(hero1Weight) > Number(hero2Weight)){
+        history.push("/winner/" + hero1.id)
+      }else{
+        history.push("/winner/" + hero2.id)
+      }
     }
    
   }
