@@ -197,8 +197,7 @@ function Card() {
     }
 
     //----------------------------------------
-    console.log(count1);
-    console.log(count2);
+   
 
     if(count1 > count2){
       history.push("/winner/" + hero1.id)
@@ -214,7 +213,8 @@ function Card() {
    
   }
 
-
+ console.log(hero1powerStats);
+    console.log(hero2powerStats);
   const Background1 = heroImage1.url;
 
   const Background2 = heroImage2.url;
@@ -222,9 +222,8 @@ function Card() {
 
   return (
     <>
-      <div id="woo" className="row">
-        <div id="entry1" className="col s4 m5">
-          <Slide1>
+     
+          <Slide1 style={{margin: "0 auto"}}>
             <div className="card-panel">
               <h5 className="heroName">{hero1.name}</h5>
               <img src={Background1} id="image" alt="superhero" />
@@ -232,10 +231,7 @@ function Card() {
               <div className="info">{hero1Weight} </div>
               <div className="info">{hero1Apperance.race} </div>
             </div>
-          </Slide1>
-        </div>
-        <div id="entry2" className="col s4 m5">
-          <Slide2>
+            <div id="vs">VS</div>
             <div className="card-panel">
               <h5 className="heroName">{hero2.name}</h5>
               <img src={Background2} id="image" alt="superhero1" />
@@ -243,12 +239,10 @@ function Card() {
               <div className="info">{hero2Weight} </div>
               <div className="info">{hero2Apperance.race} </div>
             </div>
-          </Slide2>
-        </div>
+          </Slide1>
         <button id="calc" className="center-align" onClick={calculate} >
-          Start this Thing
+          Start Showdown
          </button>
-      </div>
     </>
   );
 }

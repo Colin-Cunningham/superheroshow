@@ -126,7 +126,7 @@ function Choose() {
             <h4 key={heroId2.name}style={{fontSize: "x-large"}}>Combatant: {heroId2.name} </h4>
         </div>
       </div>
-      <button onClick={begin} id="wool" >Lets start this thing</button>
+      <button onClick={begin} id="wool" >Continue</button>
     </>
   );
 }

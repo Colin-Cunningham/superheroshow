@@ -13,9 +13,10 @@
     width: 10px;
 }
 
+
+
 #entry2 li{
     display: inline-block;
-  
 }
 
 #entry2 ul{
@@ -36,8 +37,7 @@
 
 #image1{
     width: 200px;
-    float: left;
-    margin-left: 12rem;
+    margin-left: 40%;
 }
 
 .collection-item{
@@ -52,3 +52,12 @@
     font-style: oblique;
     font-size: smaller;
 }
+
+
+
+@media screen and (max-width: 589px) {
+    #entry2{
+        width: auto;
+    }
+  }
+  
