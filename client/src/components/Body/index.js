@@ -24,7 +24,7 @@ function Header() {
       <Route exact path={"/fight/:id1/:id2"}>
         <Card />
       </Route>
-      <Route exact path={"/winner/:id"}>
+      <Route exact path={"/winner/:id1/:id2"}>
         <Winner />
       </Route>
     </div>

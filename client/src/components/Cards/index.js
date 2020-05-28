@@ -200,18 +200,18 @@ function Card() {
    
 
     if(count1 > count2){
-      history.push("/winner/" + hero1.id)
+      history.push("/winner/" + hero1.id + "/" + hero2.id)
     }
 
     if(count1 < count2){
-      history.push("/winner/" + hero2.id)
+      history.push("/winner/" + hero2.id + "/" + hero1.id)
     }
 
     if(count1 === count2){
       if(Number(hero1Weight) > Number(hero2Weight)){
-        history.push("/winner/" + hero1.id)
+        history.push("/winner/" + hero1.id + "/" + hero2.id)
       }else{
-        history.push("/winner/" + hero2.id)
+        history.push("/winner/" + hero2.id + "/" + hero1.id)
       }
     }
    
