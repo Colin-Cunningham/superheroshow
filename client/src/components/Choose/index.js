@@ -63,7 +63,7 @@ function Choose() {
   return (
     <>
       <div id="woo" className="row">
-          <h4 style={{textAlign: "center"}}>Which one did you mean?</h4>
+          <h4 style={{textAlign: "center", textDecoration: "underline"}}>Which one did you mean?</h4>
         <div id="entry1" className="col s4 m5">
             <div className="card-panel">
               { hero1 ? hero1.map((hero) => (
@@ -71,27 +71,23 @@ function Choose() {
                   <button key={hero.id} onClick={(e) => setHeroId1(hero)} className="choose"  >
                     <div
                      key={hero.name}
-                      style={{
-                        textAlign: "center",
-                        textDecoration: "underline",
-                        fontSize: "larger",
-                        marginBottom: "3px",
-                      }}
+                     className="title"
                     >
                       {hero.name}
                     </div>
-                    <div key={hero.biography["full-name"]} style={{ marginBottom: "1rem", fontSize: "smaller" }}>
+                    <div key={hero.biography["full-name"]} className="fullnames" >
                       Indentity: {hero.biography["full-name"]}
                     </div>
-                    <div key={hero.biography["first-appearance"]} style={{ fontSize: "small", fontStyle: "oblique" }}>
+                    <div key={hero.biography["first-appearance"]} className="firstap" >
                       First Appeared: {hero.biography["first-appearance"]}
                     </div>
                   </button>
                   <br />
+                  <div className="divider"></div>
                 </>
               )): <p>There are no results to display</p>}
             </div>
-            <h4 key={heroId1.name} style={{fontSize: "x-large"}}>Combatant: {heroId1.name}  </h4>
+            <h3 id="chosen" key={heroId1.name}>Combatant: {heroId1.name}  </h3>
         </div>
         <div id="entry2" className="col s4 m5">
             <div className="card-panel">
@@ -100,30 +96,26 @@ function Choose() {
                   <button key={hero.id}  onClick={(e) => setHeroId2(hero)} className="choose" >
                     <div
                     key={hero.name}
-                      style={{
-                        textAlign: "center",
-                        textDecoration: "underline",
-                        fontSize: "larger",
-                        marginBottom: "3px",
-                      }}
+                    className="title"
                     >
                       {hero.name}
                     </div>
 
-                    <div key={hero.biography["full-name"]} style={{ marginBottom: "1rem", fontSize: "smaller" }}>
+                    <div key={hero.biography["full-name"]} className="fullnames">
                       Identity: {hero.biography["full-name"]}
                     </div>
 
-                    <div key={hero.biography["first-appearance"]} style={{ fontSize: "small", fontStyle: "oblique" }}>
-                      First Appeared: <br />
+                    <div key={hero.biography["first-appearance"]} className="firstap" >
+                      First Appeared: {" "}
                       {hero.biography["first-appearance"]}
                     </div>
                   </button>
                   <br />
+                  <div className="divider"></div>
                 </>
               )) : <p>There are no results to display</p>}
             </div>
-            <h4 key={heroId2.name}style={{fontSize: "x-large"}}>Combatant: {heroId2.name} </h4>
+            <h3 id="chosen" key={heroId2.name}>Combatant: {heroId2.name} </h3>
         </div>
       </div>
       <button onClick={begin} id="wool" >Continue</button>

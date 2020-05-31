@@ -13,6 +13,7 @@ import { Route } from "react-router-dom";
 function Header() {
   return (
     //Wrapper for main content of page
+    <div id="background">
     <div className="container"> 
       <Route exact path={"/"}>
         <Directions />
@@ -28,7 +29,7 @@ function Header() {
         <Winner />
       </Route>
     </div>
-
+  </div>
   );
 }
 

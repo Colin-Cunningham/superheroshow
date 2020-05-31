@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import "./style.css";
-import styled, { keyframes } from "styled-components";
-import { slideInRight, slideInLeft } from "react-animations";
+// import styled, { keyframes } from "styled-components";
+// import { slideInRight, slideInLeft } from "react-animations";
 import API from "../../utils/API";
 
 // Div Animations -----------------
-const leftIn = keyframes`${slideInLeft}`;
-const rightIn = keyframes`${slideInRight}`;
+// const leftIn = keyframes`${slideInLeft}`;
+// const rightIn = keyframes`${slideInRight}`;
 
-//Hero One Slide in from the left
-const Slide1 = styled.div`
-  animation: 1s ${leftIn};
-`;
+// //Hero One Slide in from the left
+// const Slide1 = styled.div`
+//   animation: 1s ${leftIn};
+// `;
 
-//Hero2 Slide in from the right
-const Slide2 = styled.div`
-  animation: 1s ${rightIn};
-`;
+// //Hero2 Slide in from the right
+// const Slide2 = styled.div`
+//   animation: 1s ${rightIn};
+// `;
 
 //-------------------------------
 
@@ -225,10 +225,8 @@ function Card() {
   //${hero2.image.url}
 
   return (
-    <>
-     
-          <Slide1 style={{margin: "0 auto"}}>
-            <div className="card-panel">
+    <div className="row">
+            <div>
               <h5 className="heroName">{hero1.name}</h5>
               <img src={Background1} id="image" alt="superhero" />
               <div className="info">{hero1Height}</div>
@@ -236,18 +234,17 @@ function Card() {
               <div className="info">{hero1Apperance.race} </div>
             </div>
             <div id="vs">VS</div>
-            <div className="card-panel">
+            <div>
               <h5 className="heroName">{hero2.name}</h5>
               <img src={Background2} id="image" alt="superhero1" />
               <div className="info">{hero2Height} </div>
               <div className="info">{hero2Weight} </div>
               <div className="info">{hero2Apperance.race} </div>
             </div>
-          </Slide1>
         <button id="calc" className="center-align" onClick={calculate} >
           Start Showdown
          </button>
-    </>
+    </div>
   );
 }
 

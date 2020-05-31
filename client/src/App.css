@@ -1,5 +1,15 @@
 .App {
   height: 100%;
+  background: url("./thor.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
-
+@media screen and (max-width: 654px) {
+  .App {
+    background-size: contain;
+    background-position-x: center;
+    background-attachment: fixed;
+  }
+}

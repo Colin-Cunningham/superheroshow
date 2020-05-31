@@ -1,20 +1,13 @@
-.card-panel{
-    background-color: #3333333f;
-    background-size: contain;
-    min-width: fit-content;
-    max-width: 20rem;
-    margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
+
 
 #entry1{
-    margin: 2rem;
+    position: static;
+    width: 33%;
 }
 
 #entry2{
     margin: 2rem;
-    display: inline;
+    
 }
 
 .heroName{
@@ -71,3 +64,4 @@
     }
   }
   
+

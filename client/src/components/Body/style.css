@@ -11,3 +11,8 @@
 .container{
     text-align: center;
 }
+
+#background{
+    width: 100%;
+    height: 100%;
+}

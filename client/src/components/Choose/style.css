@@ -1,9 +1,12 @@
 .card-panel{
-    background-color: #3333333f;
-    padding: 2px;
     background-size: contain;
-    text-align: center;
-    min-height: 280px;
+    min-width: fit-content;
+    height: fit-content;
+    width: 20rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgba(128, 128, 128, 0.151) !important;
 }
 
 #entry1{
@@ -42,12 +45,10 @@
 
 .choose{
     text-align: left;
-    width: 15rem;
-    background-color: whitesmoke;
-    border-radius: 12px;
+    width: 100%;
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
-    padding: 5px;
-    font-size: larger
+    font-size: larger;
+    background-color: transparent
 };
 
 .name1{
@@ -56,9 +57,70 @@
 }
 
 #wool{
-    padding: 1rem;
+    width: 33%;
     border-radius: 4px;
-    background-color: black;
+    background-color: #333333;
     color: white;
-    margin-top: -4rem;
+    font-family: 'Montaga', serif; 
+    font-weight: 800;
+    font-size: x-large;
+    padding: 1rem
+    
+}
+
+button:hover{
+    background-color:rgb(155, 155, 240) !important;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+button:focus{
+    background-color:rgb(155, 155, 240) !important;
+}
+
+
+button{
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.title{
+    min-width: fit-content;
+    width: 100%;
+    font-size: larger;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #333333;
+    color: whitesmoke;
+    padding: 4px
+}
+
+.fullnames{
+    min-width: fit-content;
+    width: 100%;
+    font-size: large;
+    font-family: 'Montaga', serif;
+    color: #333333;
+    padding: 4px;
+    font-weight: 700;
+}
+
+.firstap{
+    min-width: fit-content;
+    width: 100%;
+    font-size: medium;
+    font-family: 'Montaga', serif;
+    color: #333333;
+    padding: 4px;
+    font-weight: 700;
+}
+
+#chosen{
+    font-size: 25px;
+    text-decoration: underline overline;
+    transform: skew(10px);
+   font-style: oblique;
+   font-family: 'Exo 2', sans-serif;
+   color: #333333;
+   width: fit-content;
+   margin: 0 auto;
 }
