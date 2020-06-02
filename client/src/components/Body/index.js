@@ -8,6 +8,7 @@ import Card from "../Cards/index"
 import Choose from "../Choose/index"
 import Winner from "../Winner/index"
 import AMG from "../AMG/index"
+import Quiz from "../Quiz/index"
 import { Route } from "react-router-dom";
 
 
@@ -31,6 +32,9 @@ function Header() {
       </Route>
       <Route exact path={"/amg"}>
         <AMG />
+      </Route>
+      <Route exact path={"/quiz"}>
+        <Quiz />
       </Route>
     </div>
   </div>
