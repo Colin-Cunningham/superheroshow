@@ -64,7 +64,7 @@ function Choose() {
     <>
       <div id="woo" className="row">
           <h4 style={{textAlign: "center", textDecoration: "underline"}}>Which one did you mean?</h4>
-        <div id="entry1" className="col s4 m5">
+        <div id="entry1" className="col s12 m12 l12">
             <div className="card-panel">
               { hero1 ? hero1.map((hero) => (
                 <>
@@ -89,7 +89,7 @@ function Choose() {
             </div>
             <h3 id="chosen" key={heroId1.name}>Combatant: {heroId1.name}  </h3>
         </div>
-        <div id="entry2" className="col s4 m5">
+        <div id="entry2" className="col s12 m12 l12">
             <div className="card-panel">
               { hero2 ? hero2.map((hero) => (
                 <>

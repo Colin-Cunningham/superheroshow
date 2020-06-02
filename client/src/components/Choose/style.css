@@ -10,11 +10,13 @@
 }
 
 #entry1{
-    margin: 2rem;
+
+    margin-right: 1.5rem
 }
 
 #entry2{
-    margin: 2rem;
+    
+    margin-right: 1.5rem
 }
 
 .heroName{
@@ -40,7 +42,7 @@
 }
 
 #woo{
-    margin-top: 6rem
+    margin-top: 6rem;
 }
 
 .choose{
