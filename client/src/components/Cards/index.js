@@ -67,7 +67,7 @@ function Card() {
 
   const history = useHistory();
 
-  function getScore(hero1, hero2) {
+  function getScore(hero1, hero2, hero1id, hero2id) {
     
     const arr1 = Object.values(hero1);
     const arr2 = Object.values(hero2);
@@ -116,19 +116,20 @@ function Card() {
         }
     }
 
+    console.log(hero1.id)
     if (score1 > score2) {
-      history.push("/winner/" + hero1.id + "/" + hero2.id);
+      history.push("/winner/" + hero1id + "/" + hero2id);
     }
   
     if (score1 < score2) {
-      history.push("/winner/" + hero2.id + "/" + hero1.id);
+      history.push("/winner/" + hero2id + "/" + hero1id);
     }
   
     if (score1 === score2) {
       if (Number(hero1Weight) > Number(hero2Weight)) {
-        history.push("/winner/" + hero1.id + "/" + hero2.id);
+        history.push("/winner/" + hero1id + "/" + hero2id);
       } else {
-        history.push("/winner/" + hero2.id + "/" + hero1.id);
+        history.push("/winner/" + hero2id + "/" + hero1id);
       }
     }
   }
@@ -168,7 +169,7 @@ function Card() {
       <button
         id="calc"
         className="center-align"
-        onClick={() => getScore(hero1powerStats, hero2powerStats)}
+        onClick={() => getScore(hero1powerStats, hero2powerStats, hero1.id, hero2.id)}
       >
         Start Showdown
       </button>
