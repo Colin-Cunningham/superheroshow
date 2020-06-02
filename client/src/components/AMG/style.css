@@ -35,3 +35,15 @@
 #podcast{
     margin-top: 5rem;
 }
+
+
+@media screen and (max-width: 400px) {
+    #img{
+        background-image: url("./realLogo.PNG");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      
+    
+    }
+  }
