@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom"
 import "./style.css";
 
 function Footer() {
@@ -21,14 +20,14 @@ function Footer() {
             <ul>
               <li>
                
-                  <a href="https://github.com/Colin-Cunningham" target="_blank" className="grey-text text-lighten-3" >
+                  <a href="https://github.com/Colin-Cunningham" rel="noopener noreferrer" target="_blank" className="grey-text text-lighten-3" >
                     Github
                   </a>
               
               </li>
               <li></li>
               <li>
-                  <a className="grey-text text-lighten-3" target="_blank" href="https://colin-cunningham-portfolio.herokuapp.com/">
+                  <a className="grey-text text-lighten-3" rel="noopener noreferrer" target="_blank" href="https://colin-cunningham-portfolio.herokuapp.com/">
                     Portfolio
                   </a>
               </li>

@@ -14,3 +14,13 @@
     src: url(../../AVENGEANCE-HEROIC-AVENGER-BD.otf);
   }
   
+  ul.tabs {
+    display : flex;
+    background-color: transparent;
+    margin-top: 4rem
+}
+
+li.tab {
+   flex-basis : 33.33%;
+   
+}

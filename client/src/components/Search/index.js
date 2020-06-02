@@ -36,7 +36,7 @@ function Search() {
         <h2 id="vs" className="col s3">VS</h2>
         <div id="in" className="input-field col s4">
           <input
-            placeholder="Captain America"
+            placeholder="Iron Man"
             id="Hero2"
             type="text"
             className="validate"

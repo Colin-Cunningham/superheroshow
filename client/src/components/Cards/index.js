@@ -1,25 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useHistory, Link } from "react-router-dom";
+import { useParams, useHistory} from "react-router-dom";
 import "./style.css";
-// import styled, { keyframes } from "styled-components";
-// import { slideInRight, slideInLeft } from "react-animations";
 import API from "../../utils/API";
-
-// Div Animations -----------------
-// const leftIn = keyframes`${slideInLeft}`;
-// const rightIn = keyframes`${slideInRight}`;
-
-// //Hero One Slide in from the left
-// const Slide1 = styled.div`
-//   animation: 1s ${leftIn};
-// `;
-
-// //Hero2 Slide in from the right
-// const Slide2 = styled.div`
-//   animation: 1s ${rightIn};
-// `;
-
-//-------------------------------
 
 function Card() {
   // UseEffect to Load in Characters
@@ -49,8 +31,6 @@ function Card() {
   const [hero1powerStats, setHero1powerStats] = useState([]);
   const [hero2powerStats, setHero2powerStats] = useState([]);
 
-  const [winner, setWinner] = useState("");
-
   //API Calls
   const { id1 } = useParams();
   const { id2 } = useParams();
@@ -58,15 +38,15 @@ function Card() {
   function getHero1() {
     API.findByID(id1)
       .then((res) => {
-        if(res.data === undefined){
-          getHero1()
-        }else{
-        setHero1(res.data);
-        setHeroImage1(res.data.image);
-        setHero1Apperance(res.data.appearance);
-        setHero1Height(res.data.appearance.height[0]);
-        setHero1Weight(res.data.appearance.weight[0]);
-        setHero1powerStats(res.data.powerstats);
+        if (res.data === undefined) {
+          getHero1();
+        } else {
+          setHero1(res.data);
+          setHeroImage1(res.data.image);
+          setHero1Apperance(res.data.appearance);
+          setHero1Height(res.data.appearance.height[0]);
+          setHero1Weight(res.data.appearance.weight[0]);
+          setHero1powerStats(res.data.powerstats);
         }
       })
       .catch((err) => console.log(err));
@@ -87,164 +67,112 @@ function Card() {
 
   const history = useHistory();
 
+  function getScore(hero1, hero2) {
+    
+    const arr1 = Object.values(hero1);
+    const arr2 = Object.values(hero2);
 
-  function calculate() {
-    var count1 = 0;
 
-    var count2 = 0;
+    var score1 = 0;
+    var score2 = 0;
 
-    //Intellegence Check -----------------------------
-    if (
-      Number(hero1powerStats.intelligence) >
-      Number(hero2powerStats.intelligence)
-    ) {
-      count1 = count1 + 3;
+    for (var i = 0; i < arr1.length; i++) {
+        var stat1 = Number(arr1[i]);
+        var stat2 = Number(arr2[i]);
+
+        if (stat1 > stat2) {
+          var sum = stat1 - stat2;
+          if (sum >= 40) {
+            score1 = score1 + 4;
+          }
+          if (sum >= 20 && sum < 40) {
+            score1 = score1 + 3;
+            
+          }
+          if (sum >= 10 && sum < 20) {
+            score1 = score1 + 2;
+            
+          }
+          if (10 > sum) {
+            score1 = score1 + 1;
+            
+          }
+        }
+
+        if (stat2 > stat1) {
+          var sum = stat2 - stat1;
+          if (sum >= 40) {
+            score2 = score2 + 4;
+          }
+          if (sum >= 20 && sum < 40) {
+            score2 = score2 + 3;
+          }
+          if (sum >= 10 && sum < 20) {
+            score2 = score2 + 2;
+          }
+          if (10 > sum) {
+            score2 = score2 + 1;
+          }
+        }
     }
 
-    if (
-      Number(hero1powerStats.intelligence) <
-      Number(hero2powerStats.intelligence)
-    ) {
-      count2 = count2 + 3;
+    if (score1 > score2) {
+      history.push("/winner/" + hero1.id + "/" + hero2.id);
     }
-
-    if (
-      Number(hero1powerStats.intelligence) ===
-      Number(hero2powerStats.intelligence)
-    ) {
-      console.log("nothing");
+  
+    if (score1 < score2) {
+      history.push("/winner/" + hero2.id + "/" + hero1.id);
     }
-
-    //----------------------------------------
-
-    //Durability Check -----------------------------
-    if (
-      Number(hero1powerStats.durability) > Number(hero2powerStats.durability)
-    ) {
-      count1 = count1 + 3;
-    }
-
-    if (
-      Number(hero1powerStats.durability) < Number(hero2powerStats.durability)
-    ) {
-      count2 = count2 + 3;
-    }
-
-    if (
-      Number(hero1powerStats.durability) === Number(hero2powerStats.durability)
-    ) {
-      console.log("nothing");
-    }
-
-    //----------------------------------------
-
-    //Power Check -----------------------------
-    if (Number(hero1powerStats.power) > Number(hero2powerStats.power)) {
-      count1 = count1 + 2;
-    }
-
-    if (Number(hero1powerStats.power) < Number(hero2powerStats.power)) {
-      count2 = count2 + 2;
-    }
-
-    if (Number(hero1powerStats.power) === Number(hero2powerStats.power)) {
-      console.log("nothing");
-    }
-
-    //----------------------------------------
-
-    //Combat Check -----------------------------
-    if (Number(hero1powerStats.combat) > Number(hero2powerStats.combat)) {
-      count1 = count1 + 2;
-    }
-
-    if (Number(hero1powerStats.combat) < Number(hero2powerStats.combat)) {
-      count2 = count2 + 2;
-    }
-
-    if (Number(hero1powerStats.combat) === Number(hero2powerStats.combat)) {
-      console.log("nothing");
-    }
-
-    //----------------------------------------
-
-    //Strength Check -----------------------------
-    if (Number(hero1powerStats.strength) > Number(hero2powerStats.strength)) {
-      count1 = count1 + 1;
-    }
-
-    if (Number(hero1powerStats.strength) < Number(hero2powerStats.strength)) {
-      count2 = count2 + 1;
-    }
-
-    if (Number(hero1powerStats.strength) === Number(hero2powerStats.strength)) {
-      console.log("nothing");
-    }
-
-    //----------------------------------------
-
-    //Speed Check -----------------------------
-    if (Number(hero1powerStats.speed) > Number(hero2powerStats.speed)) {
-      count1 = count1 + 1;
-    }
-
-    if (Number(hero1powerStats.speed) < Number(hero2powerStats.speed)) {
-      count2 = count2 + 1;
-    }
-
-    if (Number(hero1powerStats.speed) === Number(hero2powerStats.speed)) {
-      console.log("nothing");
-    }
-
-    //----------------------------------------
-   
-
-    if(count1 > count2){
-      history.push("/winner/" + hero1.id + "/" + hero2.id)
-    }
-
-    if(count1 < count2){
-      history.push("/winner/" + hero2.id + "/" + hero1.id)
-    }
-
-    if(count1 === count2){
-      if(Number(hero1Weight) > Number(hero2Weight)){
-        history.push("/winner/" + hero1.id + "/" + hero2.id)
-      }else{
-        history.push("/winner/" + hero2.id + "/" + hero1.id)
+  
+    if (score1 === score2) {
+      if (Number(hero1Weight) > Number(hero2Weight)) {
+        history.push("/winner/" + hero1.id + "/" + hero2.id);
+      } else {
+        history.push("/winner/" + hero2.id + "/" + hero1.id);
       }
     }
-   
   }
 
- console.log(hero1powerStats);
-    console.log(hero2powerStats);
+ 
   const Background1 = heroImage1.url;
 
   const Background2 = heroImage2.url;
-  //${hero2.image.url}
-
+ 
   return (
-    <div className="row">
-            <div>
-              <h5 className="heroName">{hero1.name}</h5>
-              <img src={Background1} id="image" alt="superhero" />
-              <div className="info">{hero1Height}</div>
-              <div className="info">{hero1Weight} </div>
-              <div className="info">{hero1Apperance.race} </div>
-            </div>
-            <div id="vs">VS</div>
-            <div>
-              <h5 className="heroName">{hero2.name}</h5>
-              <img src={Background2} id="image" alt="superhero1" />
-              <div className="info">{hero2Height} </div>
-              <div className="info">{hero2Weight} </div>
-              <div className="info">{hero2Apperance.race} </div>
-            </div>
-        <button id="calc" className="center-align" onClick={calculate} >
-          Start Showdown
-         </button>
-    </div>
+    <>
+      <div id="disp" className="row">
+        <div id="lside" className="col s12 m12 l6 box ">
+          <div id="lsideone">
+            <div className="heroNames">{hero1.name}</div>
+            <div className="tit">Notable Attributes</div>
+            <div className="infos">Height: {hero1Height} </div>
+            <div className="infost">Weight: {hero1Weight} </div>
+            <div className="infos">Race: {hero1Apperance.race} </div>
+            <div className="infost">Gender: {hero1Apperance.gender}</div>
+          </div>
+          <img src={Background1} id="image" alt="superhero" />
+        </div>
+        <div id="rside" className="col s12 m12 l6 box ">
+          <div id="rsideone">
+            <div className="heroNames">{hero2.name}</div>
+            <div className="tit">Notable Attributes</div>
+            <div className="infos">Height: {hero2Height} </div>
+            <div className="infost">Weight: {hero2Weight} </div>
+            <div className="infos">Race: {hero2Apperance.race} </div>
+            <div className="infost">Gender: {hero2Apperance.gender}</div>
+          </div>
+
+          <img src={Background2} id="image" alt="superhero1" />
+        </div>
+      </div>
+      <button
+        id="calc"
+        className="center-align"
+        onClick={() => getScore(hero1powerStats, hero2powerStats)}
+      >
+        Start Showdown
+      </button>
+    </>
   );
 }
 

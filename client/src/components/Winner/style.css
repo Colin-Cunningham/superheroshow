@@ -1,69 +1,60 @@
-#entry{
-    width: 50%;
-    text-align: center;
-    margin-top: 8rem;
+#win{
+    margin-top: 5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Bebas Neue', serif;
+    text-decoration: underline;
 }
 
-#infor{
-    width: 33%;
-    float: right;
+#dis{
+   width: 100%
+
 }
 
-#coc{
-    width: 10px;
+#lside1{
+    text-align: right;
+    background-color: #6b6b6b;
+    padding: 2px;
+    margin-left: 25%;
+    margin-right: 25%
 }
 
-
-
-#entry2 li{
-    display: inline-block;
-}
-
-#entry2 ul{
-    border-bottom-style: solid;
-    border-width: 2px;
-}
-
-#tabhead li{
-    display: inline-block;
-    margin: .5rem;
-}
-
-#tabhead ul{
-    font-style: italic;
-    border-bottom-style: solid;
-    border-width: 2px;
-}
-
-#image1{
-    width: 200px;
-    margin-left: 40%;
-}
-
-.collection-item{
-    width: 100%;
-    text-align: left;
-    background-color: #333333;
-    margin: 0 auto;
-}
-
-.alias{
-    display: inline-block;
-    font-style: oblique;
-    font-size: smaller;
-}
-
-.lose{
-    display: inline-block;
-    font-size: smaller;
-    font-style: italic;
-    color: rgb(139, 139, 0)
-}
-
-
-@media screen and (max-width: 589px) {
-    #entry2{
-        width: auto;
-    }
+@media screen and (max-width: 654px) {
+    #lside1 {
+     margin-right: 0;
+     margin-left: 0;
+    };
   }
-  
+
+  #breakdown{
+      background-color: 
+      #969696 !important;
+      margin-top: 8rem;
+      border-radius: 6px;
+  }
+
+  #titles{
+      font-family: 'Bebas Neue', serif;
+      color: #1a1414;
+      margin-top: 0;
+      font-size: xxx-large;
+  }
+
+  th{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-size: larger;
+  }
+
+  td{
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .num{
+      font-weight: 900;
+      font-size: large;
+      font-family: monospace;
+      text-align: justify;
+  }

@@ -1,18 +1,21 @@
 
+.tit{
 
-#entry1{
-    position: static;
-    width: 33%;
-}
-
-#entry2{
-    margin: 2rem;
-    
-}
-
-.heroName{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Bebas Neue', serif;
+    text-decoration: underline;
     text-align: center;
+    font-weight: 800;
+    font-size: x-large;
+    margin-top: 10px;
+}
+
+
+.heroNames{
+    font-family: MyFirstFont;
+    background-color: #f2f2f2;
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 10px;
 }
 
 
@@ -20,24 +23,34 @@
     margin: 2rem;
 }
 
-.info{
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   text-align: center;
-   margin-top: 10px;
+.infos{
+   font-family: 'Exo 2', sans-serif;
+   margin-top: 8px;
+   background-color: #242424;
+   text-align: left;
+   font-size: larger;
+   color: whitesmoke;
+   padding-left: 15px;
 }
 
-.FunFact{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    margin-top: 20px;
-}
+.infost{
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 8px;
+    text-align: left;
+    font-size: larger;
+    padding-left: 15px;
+    
+ }
+
+
 
 #woo{
     margin-top: 10rem;
 }
 
 #image{
-    width: 175px
+    width: 50%;
+    border-color: #333333;
 }
 
 #calc{
@@ -46,22 +59,60 @@
     color: whitesmoke;
     font-size: larger;
     padding: 12px;
-    margin-top: 2rem
 }
 
 .container{
     text-align: center;
 }
 
-#vs{
-    font-size: 5rem;
-    padding-top: 1rem;
+#a{
+    border-left: solid;;
 }
 
-@media screen and (max-width: 589px) {
-    #woo {
-      margin-right: 2.5rem;
+@media screen and (max-width: 654px) {
+    .infos {
+      margin-top: 2px
     }
+    .infost {
+        margin-top: 2px
+      }
+  }
+
+  @media screen and (max-width: 804px) {
+    .tit{
+        font-size: medium;
+    }
+    .heroNames{
+        font-size: large;
+    }
+    
+    
   }
   
+#lside{
+    min-height: fit-content;
+    text-align: right;
+    margin-top: 8rem;
+    background-color: #6b6b6b;
+    border-bottom-left-radius: 8px ;
+    padding: 2px;
+}
 
+#rside{
+    text-align: left;
+    margin-top: 8rem;
+    background-color:#6b6b6b;
+    border-bottom-right-radius: 8px 12px;
+    padding: 2px;
+}
+
+
+#rsideone{
+    width: 50%;
+    float: right
+}
+
+#lsideone{
+    width: 50%;
+    float: left
+}
