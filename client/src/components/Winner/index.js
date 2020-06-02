@@ -113,7 +113,7 @@ function Winner() {
           <table >
             <tbody>
             <tr>
-              <th style={{ width: "50%" }}>Categories <br /> (0-100)</th>
+              <th style={{ width: "30%" }}>Categories <br /> (0-100)</th>
               <th>
                 {hero1.name} <br /> (Winner)
               </th>

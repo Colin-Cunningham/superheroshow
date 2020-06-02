@@ -1,0 +1,29 @@
+#contenthold p{
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+
+#contenthold{
+    margin-bottom: 3rem;
+
+}
+
+#twitter{
+    background-color: #333333;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+#img{
+    width: 100%;
+    background-image: url("./banner.JPG");
+    padding: 10rem;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 1rem ;
+
+}

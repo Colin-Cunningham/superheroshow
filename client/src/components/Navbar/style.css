@@ -5,7 +5,8 @@
 
 .nav-wrapper{
     background-color: #333333;
-    padding: 2px
+    padding: 2px;
+
 }
 
 
@@ -16,11 +17,26 @@
   
   ul.tabs {
     display : flex;
-    background-color: transparent;
-    margin-top: 4rem
+    background-color: rgb(129, 129, 202);
+    margin-top: 3.8rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin-bottom: 1rem;
+   
 }
 
 li.tab {
    flex-basis : 33.33%;
-   
+    color: #333333 !important;
 }
+
+.tab a {
+     color: #252525 !important;
+     text-decoration: underline;
+     font-size: 13px !important;
+     font-style: oblique;
+     font-weight: 800;
+ }
+ 
+/* #3b4aa8 */
+

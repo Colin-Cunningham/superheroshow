@@ -7,6 +7,7 @@ import Search from "../Search/index"
 import Card from "../Cards/index"
 import Choose from "../Choose/index"
 import Winner from "../Winner/index"
+import AMG from "../AMG/index"
 import { Route } from "react-router-dom";
 
 
@@ -14,7 +15,7 @@ function Header() {
   return (
     //Wrapper for main content of page
     <div id="background">
-    <div className="container"> 
+    <div id="wooster" className="container"> 
       <Route exact path={"/"}>
         <Directions />
         <Search />
@@ -27,6 +28,9 @@ function Header() {
       </Route>
       <Route exact path={"/winner/:id1/:id2"}>
         <Winner />
+      </Route>
+      <Route exact path={"/amg"}>
+        <AMG />
       </Route>
     </div>
   </div>
