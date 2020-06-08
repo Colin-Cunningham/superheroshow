@@ -5,7 +5,7 @@ import "./style.css";
 
 function directions() {
 
-  const commonHero = [ "30", "35", "38", "50", "69", "63", "79", "95", "123", "149", "156", "196", "204", "213", "233", "234", "260", "263", "280", "527", "298", "299", "309", "313", "315", "332", "374", "620", "680", "703", "497", "347", "98", "281", "530", "536", "289", "550", "561", "333", "589", "598", "612", "467", "457", "720", "701" ]
+  const commonHero = [ "30", "35", "38", "50", "69", "63", "79", "95", "190", "149", "156", "196", "204", "213", "233", "234", "260", "263", "280", "527", "298", "299", "309", "313", "315", "332", "374", "620", "680", "703", "497", "347", "98", "281", "530", "536", "289", "550", "561", "333", "589", "598", "612", "467", "457", "720", "701" ]
 
 
   return (
@@ -27,7 +27,7 @@ function directions() {
                 See all Heroes
               </button>
             </a>
-            <Link to={"/fight/" + commonHero[Math.floor(Math.random() * 51)] + "/" + commonHero[Math.floor(Math.random() * 51)]} >
+            <Link to={"/fight/" + commonHero[Math.floor(Math.random() * 49)] + "/" + commonHero[Math.floor(Math.random() * 49)]} >
                 <button id="buttons" type="button" class="btn btn-secondary">
                    Random Battle
                </button>

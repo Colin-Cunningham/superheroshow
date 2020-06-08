@@ -80,6 +80,14 @@ function Card() {
         var stat1 = Number(arr1[i]);
         var stat2 = Number(arr2[i]);
 
+        if(stat1 === null){
+           var stat1 = 0
+        }
+        
+        if(stat2 === null){
+          stat2 = 0
+      }
+
         if (stat1 > stat2) {
           var sum = stat1 - stat2;
           if (sum >= 40) {

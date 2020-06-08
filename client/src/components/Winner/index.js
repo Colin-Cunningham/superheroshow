@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import "./style.css";
 import API from "../../utils/API";
 
@@ -11,6 +11,14 @@ function Winner() {
     getHero2();
   }, []);
 
+  const history = useHistory()
+  useEffect(() => {
+    return () => {
+        if (history.action === "POP") {
+            history.replace(history.location.pathname, "/");
+        }
+    };
+}, [history])
   //UseState to Set Characters
 
   // const styles = {
@@ -124,10 +132,10 @@ function Winner() {
             <tr>
               <td>Strength</td>
               <td>
-                <p className="num">{hero1powerStats.strength}</p>
+                <p className="num">{(hero1powerStats.strength === null) ? 0 : hero1powerStats.strength}</p>
               </td>
               <td>
-                <p className="num">{hero2powerStats.strength}</p>
+                <p className="num">{(hero2powerStats.strength === null) ? "0" : hero2powerStats.strength}</p>
               </td>
             </tr>
             <tr>
