@@ -8,11 +8,15 @@ import Card from "../Cards/index"
 import Choose from "../Choose/index"
 import Winner from "../Winner/index"
 import AMG from "../AMG/index"
-import Quiz from "../Quiz/index"
-import { Route } from "react-router-dom";
+import QuizTemp from "../Quiz/index"
+import QuizChoice from "../QuizChoice/index"
+import { Route, useParams } from "react-router-dom";
 
 
 function Header() {
+
+  const {movie} = useParams()
+
   return (
     //Wrapper for main content of page
     <div id="background">
@@ -34,7 +38,10 @@ function Header() {
         <AMG />
       </Route>
       <Route exact path={"/quiz"}>
-        <Quiz />
+        <QuizChoice />
+      </Route>
+      <Route exact path={"/quiz/:movie"}>
+        <QuizTemp />
       </Route>
     </div>
   </div>
