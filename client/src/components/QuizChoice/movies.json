@@ -1,21 +1,14 @@
 [
-    {
-      "id": 1,
-      "name": "Iron Man",
-      "image": "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_UY1200_CR90,0,630,1200_AL_.jpg",
-      "link": "Ironman-2008"
-    },
-    {
-        "id": 2,
-        "name": "Thor",
-        "image": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UY1200_CR89,0,630,1200_AL_.jpg",
-        "link": "Thor-2011"
-      },
-      {
-        "id": 2,
-        "name": "Thor",
-        "image": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UY1200_CR89,0,630,1200_AL_.jpg",
-        "link": "thor"
-      }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Iron Man",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_UY1200_CR90,0,630,1200_AL_.jpg",
+    "link": "Ironman-2008"
+  },
+  {
+    "id": 2,
+    "name": "Thor",
+    "image": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UY1200_CR89,0,630,1200_AL_.jpg",
+    "link": "Thor-2011"
+  }
+]
